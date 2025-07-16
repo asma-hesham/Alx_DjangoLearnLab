@@ -1,30 +1,35 @@
-# Create
-```python
-from bookshelf.models import Book
+#create 
+from bookshelf.models import Book(book = Book.objects.create(title="1984", author="George Orwell publication_year=1949))
 
-book = Book.objects.create(title="1984", author="George Orwell", publication_year=1949)
-print(book)
-```
+output = [Book: 1984]
 
-# Retrieve
-```python
+
+
+#retrieve
 book = Book.objects.get(title="1984")
-print(book.title)
-print(book.author)
-print(book.publication_year)
-```
 
-# Update
-```python
-book = Book.objects.get(title="1984")
+book.title
+output = [1984]
+
+book.author
+output = [George Orwell]
+
+book.publication_year
+output = [1949]
+
+
+
+#delete
 book.title = "Nineteen Eighty-Four"
 book.save()
-print(book.title)
-```
 
-# Delete
-```python
+book.title
+output = [Nineteen Eighty-Four]
+
+
+
+#delete
 book = Book.objects.get(title="Nineteen Eighty-Four")
 book.delete()
-print(Book.objects.all())
-```
+Book.objects.all()
+output = [ QuerySet[] ]
