@@ -1,9 +1,7 @@
-```markdown
-```python 
 book = Book.objects.get(title="1984")
 book.title
-# '1984'
+#output: '1984'
 book.author
-# 'George Orwell'
+#output: 'George Orwell'
 book.publication_year
-# 1949
+#output 1949
