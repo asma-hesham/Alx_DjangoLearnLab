@@ -9,5 +9,3 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ('title','auther','publication_year')
     list_filter = ('auther','publication_year')
     search_fields = ('title','auther')
-
-
